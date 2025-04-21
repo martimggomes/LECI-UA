@@ -1,0 +1,2 @@
+Faro,Beja,147,96
+Beja,Vidigueira,26,20

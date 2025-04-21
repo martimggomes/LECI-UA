@@ -1,0 +1,6 @@
+equipas = ("Porto", "Sporting", "Benfica", "Arouca", "Estrela", "Vitória", "Braga", "Moreirense", "Famalicão", "Boavista", "Portimonense", "Farense", "Casa Pia", "Estoril", "Gil Vicente", "Vizela", "Rio Ave", "Chaves")
+print(f"Lista de equipas: {equipas}")
+print(f"Os 5 primeiros classificados são {equipas[:5]}")
+print(f"Os 5 últimos colocado são {equipas[-5:]}")
+print(f"Os clubes por ordem alfabética: {sorted(equipas)}")
+print(f"O Arouca está na {equipas.index('Arouca') + 1}ª posição")

@@ -1,0 +1,3 @@
+print( "  o  ")
+print( "/ | \ ")
+print( " / \  ")
