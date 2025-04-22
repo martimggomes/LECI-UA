@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity andDemo is
+	port ( SW : in std_logic_vectorr(1 downto 0);
+			LEDR : out std_logic_vector(0 downto 0));
+			end AND2gate;
+
+architecture shell of andDemo is
+
+begin
+
+and_0 : enitity work.AND2gate(Behavioral)
+
+		port map( inport0 => SW(0),
+					inport1 => 	SW(1),
+					outport => LEDR(0));
+					
+end shellout std_logic);
