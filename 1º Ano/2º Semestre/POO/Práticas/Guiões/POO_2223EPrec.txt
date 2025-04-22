@@ -1,0 +1,20 @@
+
+Alínea 1) ----------------------------------
+
+User wbphxnlq [id: -2] accessed digital object doi: 10.0000/fake/10.1496/iugbzov; Created: 2024-06-04; Level: Low; Public
+
+Registered users:
+  * sunnyday12 [id: 0]
+  * techguru123 [id: 1]
+  * musiclover87 [id: 2]
+
+Digital objects of user sunnyday12 [id: 0]:
+  * doi: 10.0000/fake/10.10154/knnweak; Created: 2024-06-04; Level: Personal
+  * doi: 10.0000/fake/10.1496/iugbzov; Created: 2024-06-04; Level: Low; Public
+  * doi: 10.0000/fake/10.10213/ykbojmc; Created: 2024-06-04; Level: Personal
+  * doi: 10.0000/fake/10.8872/okklnjd; Created: 2024-06-04; Level: Restricted
+  * doi: 10.0000/fake/10.3496/ugxwwsh; Created: 2024-06-04; Level: Personal
+
+
+Alínea 2) ----------------------------------
+
