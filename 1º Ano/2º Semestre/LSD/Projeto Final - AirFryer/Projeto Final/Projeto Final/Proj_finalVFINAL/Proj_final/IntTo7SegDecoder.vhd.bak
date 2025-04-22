@@ -1,0 +1,59 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity IntTo7SegDecoder is
+    Port (
+        clk : in std_logic;
+        reset : in std_logic;
+        valuee : in integer range 0 to 999;
+        seg_units : out std_logic_vector(6 downto 0);
+        seg_tens : out std_logic_vector(6 downto 0);
+        seg_hundreds : out std_logic_vector(6 downto 0)
+    );
+end IntTo7SegDecoder;
+
+architecture Behavioral of IntTo7SegDecoder is
+    signal unitss : integer range 0 to 9;
+    signal tens : integer range 0 to 9;
+    signal hundreds : integer range 0 to 9;
+
+    -- Function to convert an integer (0 to 9) to 7-segment display
+    function to_7seg(input : integer) return std_logic_vector is
+    begin
+        case input is
+            when 0 => return "1000000"; -- 0
+            when 1 => return "1111001"; -- 1
+            when 2 => return "0100100"; -- 2
+            when 3 => return "0110000"; -- 3
+            when 4 => return "0011001"; -- 4
+            when 5 => return "0010010"; -- 5
+            when 6 => return "0000010"; -- 6
+            when 7 => return "1111000"; -- 7
+            when 8 => return "0000000"; -- 8
+            when 9 => return "0010000"; -- 9
+            when others => return "1111111"; -- Off
+        end case;
+    end function;
+
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            unitss <= 0;
+            tens <= 0;
+            hundreds <= 0;
+        elsif rising_edge(clk) then
+            -- Split the integer value into units, tens, and hundreds
+            unitss <= valuee mod 10;
+            tens <= (valuee / 10) mod 10;
+            hundreds <= (valuee / 100) mod 10;
+        end if;
+    end process;
+
+    -- Assign the 7-segment display values
+    seg_units <= to_7seg(unitss);
+    seg_tens <= to_7seg(tens);
+    seg_hundreds <= to_7seg(hundreds);
+
+end Behavioral;

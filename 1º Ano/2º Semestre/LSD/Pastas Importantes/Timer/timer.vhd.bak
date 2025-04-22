@@ -1,0 +1,102 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity timer is
+    port (
+        clk       : in std_logic;
+        reset     : in std_logic;
+        key       : in std_logic_vector(1 downto 0);
+        HEX4      : out std_logic_vector(6 downto 0);
+        HEX5      : out std_logic_vector(6 downto 0)
+    );
+end entity timer;
+
+architecture Behavioral of timer is
+    signal count_50M   : std_logic_vector(25 downto 0) := (others => '0');
+    signal one_second  : std_logic := '0';
+    signal seconds     : integer := 0;
+    signal minutes     : integer := 18;
+    signal display_val : integer := 0;
+
+    signal seg7        : std_logic_vector(6 downto 0);
+begin
+
+    -- Clock Divider: 50 MHz to 1 Hz
+    process (clk, reset)
+    begin
+        if reset = '1' then
+            count_50M <= (others => '0');
+            one_second <= '0';
+        elsif rising_edge(clk) then
+            if count_50M = 50000000 - 1 then
+                one_second <= '1';
+                count_50M <= (others => '0');
+            else
+                one_second <= '0';
+                count_50M <= count_50M + 1;
+            end if;
+        end if;
+    end process;
+
+    -- Timer Control
+    process (clk, reset)
+    begin
+        if reset = '1' then
+            seconds <= 0;
+            minutes <= 18;
+        elsif rising_edge(clk) then
+            if one_second = '1' then
+                if key(0) = '0' then  -- Increment time
+                    if seconds = 59 then
+                        seconds <= 0;
+                        if minutes < 99 then
+                            minutes <= minutes + 1;
+                        end if;
+                    else
+                        seconds <= seconds + 1;
+                    end if;
+                elsif key(1) = '0' then  -- Decrement time
+                    if seconds = 0 then
+                        if minutes > 0 then
+                            minutes <= minutes - 1;
+                            seconds <= 59;
+                        end if;
+                    else
+                        seconds <= seconds - 1;
+                    end if;
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- Display on HEX4 and HEX5
+    display_val <= minutes;
+
+    HEX4 <= seg7 when display_val mod 10 = 0 else
+            seg7 when display_val mod 10 = 1 else
+            seg7 when display_val mod 10 = 2 else
+            seg7 when display_val mod 10 = 3 else
+            seg7 when display_val mod 10 = 4 else
+            seg7 when display_val mod 10 = 5 else
+            seg7 when display_val mod 10 = 6 else
+            seg7 when display_val mod 10 = 7 else
+            seg7 when display_val mod 10 = 8 else
+            seg7 when display_val mod 10 = 9 else
+            "1111111"; -- Blank
+    
+    HEX5 <= seg7 when display_val / 10 = 0 else
+            seg7 when display_val / 10 = 1 else
+            seg7 when display_val / 10 = 2 else
+            seg7 when display_val / 10 = 3 else
+            seg7 when display_val / 10 = 4 else
+            seg7 when display_val / 10 = 5 else
+            seg7 when display_val / 10 = 6 else
+            seg7 when display_val / 10 = 7 else
+            seg7 when display_val / 10 = 8 else
+            seg7 when display_val / 10 = 9 else
+            "1111111"; -- Blank
+
+end architecture Behavioral;
+

@@ -1,0 +1,124 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/MARTIM/Desktop/Disciplinas/LSD/aula02/Parte1/simulation/qsim
+T_opt
+!s110 1709160713
+VR=1nHeXKhS_@>0UWYdQgV0
+Z2 04 20 13 work dec2_4en_vhd_vec_tst dec2_4en_arch 1
+=1-04421a8717b5-65dfb908-254-4924
+Z3 !s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +ac
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1709160796
+VTIiJAJHh?PHK::QP8g]6>0
+R2
+=1-04421a8717b5-65dfb95b-2ce-777c
+R3
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+R4
+n@_opt1
+R5
+Edec2_4en
+Z6 w1709160794
+Z7 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z8 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 gn]m8U<PzXZH32IDQ4:hj3
+Z9 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z10 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z11 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z12 DPx10 cycloneive 21 cycloneive_components 0 22 cSe5`^NYM;IRV3WNS^Q7a2
+!i122 2
+R1
+Z13 8Dec2_4EnDemo.vho
+Z14 FDec2_4EnDemo.vho
+l0
+L35 1
+V0@38l@ZG1ASNGE2^Y[z]N2
+!s100 5W0HD]L_PFF0`=ZBjlB<D2
+Z15 OL;C;2021.2;73
+32
+Z16 !s110 1709160795
+!i10b 1
+Z17 !s108 1709160795.000000
+Z18 !s90 -work|work|Dec2_4EnDemo.vho|
+Z19 !s107 Dec2_4EnDemo.vho|
+!i113 0
+Z20 o-work work
+Z21 tExplicit 1 CvgOpt 0
+Astructure
+R7
+R8
+R9
+R10
+R11
+R12
+DEx4 work 8 dec2_4en 0 22 0@38l@ZG1ASNGE2^Y[z]N2
+!i122 2
+l68
+L43 176
+VH[@431XL`o^aT2Vngd4FY3
+!s100 7ab2J;2gJSGN^9WYLY<:j1
+R15
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R20
+R21
+Edec2_4en_vhd_vec_tst
+Z22 w1709160793
+R10
+R11
+!i122 3
+R1
+Z23 8Dec2_4En_2.vwf.vht
+Z24 FDec2_4En_2.vwf.vht
+l0
+L32 1
+V=Fcz1LPO@dQF_NOg:L9622
+!s100 GGLn?lDEfWOgHJjmo`<i81
+R15
+32
+R16
+!i10b 1
+R17
+Z25 !s90 -work|work|Dec2_4En_2.vwf.vht|
+Z26 !s107 Dec2_4En_2.vwf.vht|
+!i113 0
+R20
+R21
+Adec2_4en_arch
+R10
+R11
+DEx4 work 20 dec2_4en_vhd_vec_tst 0 22 =Fcz1LPO@dQF_NOg:L9622
+!i122 3
+l47
+L34 58
+Vj8jCREDd]AROcm=^C==643
+!s100 :lT?RN=aN88=9b^_HQ=f`1
+R15
+32
+R16
+!i10b 1
+R17
+R25
+R26
+!i113 0
+R20
+R21

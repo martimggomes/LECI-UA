@@ -1,0 +1,8 @@
+
+State Machine - |airfryer_controller|state_machine:state_machine|s_state
+Name s_state.COOL s_state.FINISH s_state.COOK s_state.PREHEAT s_state.IDLE 
+s_state.IDLE 0 0 0 0 0 
+s_state.PREHEAT 0 0 0 1 1 
+s_state.COOK 0 0 1 0 1 
+s_state.FINISH 0 1 0 0 1 
+s_state.COOL 1 0 0 0 1 

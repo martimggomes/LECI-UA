@@ -1,0 +1,45 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Counter is
+    Port (
+        clk : in STD_LOGIC;
+        key : in STD_LOGIC_VECTOR(1 downto 0);
+        HEX4, HEX5 : out STD_LOGIC_VECTOR(6 downto 0)
+    );
+end Counter;
+
+architecture Behavioral of Counter is
+    signal count : integer range 0 to 9999 := 0;
+    signal second : integer range 0 to 49999999 := 0;
+    signal increment : integer range -9999 to 9999 := 0;
+begin
+    process (clk)
+    begin
+        if rising_edge(clk) then
+            -- Incrementa o contador a cada segundo
+            if second = 49999999 then
+                second <= 0;
+                count <= count + increment;
+            else
+                second <= second + 1;
+            end if;
+            
+            -- Atualiza o valor do display a cada segundo
+            HEX4 <= conv_std_logic_vector(count mod 10, HEX4'length);
+            HEX5 <= conv_std_logic_vector((count/10) mod 10, HEX5'length);
+        end if;
+    end process;
+
+    -- Lógica para incrementar ou decrementar o contador com base nas teclas pressionadas
+    process (key)
+    begin
+        case key is
+            when "01" => increment <= -1; -- Tecla 1 pressionada
+            when "10" => increment <= 1;  -- Tecla 0 pressionada
+            when others => increment <= 0; -- Nenhuma tecla pressionada
+        end case;
+    end process;
+end Behavioral;

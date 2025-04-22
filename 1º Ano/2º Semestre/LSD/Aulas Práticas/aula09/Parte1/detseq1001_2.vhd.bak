@@ -1,0 +1,62 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity detseq1001_2 is
+    port(    clk : in std_logic;
+            rst : in std_logic
+            x : in std_logic;
+            y : out std_logic);
+            
+end detseq1001_2;
+
+architecture behavioral of detseq1001_2 is 
+
+    type tstate is(E0, E1, E10, E100);
+    signal  PS, NS : tstate;
+    
+    begin
+    
+    process_sync : process(clk9)
+                        begin
+                        if rising_edge(cls) then
+                            if rst = '1' then 
+                                PS <= E0;
+                                else
+                                PS <= NS;
+                            end if;
+                        end if;
+                        end process;
+    process_comb: process(PS, x)
+                        begin 
+                        
+                        y <= '0';
+                        case PS is 
+                        when E0 =>
+                            if x = '1' then
+                            NS <= E1;
+                            else
+                            NS <= E0;
+                            end if;
+                        when E1 => 
+                            if x = '1' then
+                            NS <= E1;
+                            else
+                            NS <= E10;
+                            end if;
+                        when E10 =>
+                            if x = '1' then
+                            NS <= E1;
+                            else
+                            NS <= E100;
+                            end if;
+                        when E100 =>
+                            if x = '1' then
+                            NS <= E1;
+                            y <= '1';
+                            else
+                            NS <= E0;
+                            end if;
+                            
+                        end case;
+                    end process;
+    end Behavioral;
