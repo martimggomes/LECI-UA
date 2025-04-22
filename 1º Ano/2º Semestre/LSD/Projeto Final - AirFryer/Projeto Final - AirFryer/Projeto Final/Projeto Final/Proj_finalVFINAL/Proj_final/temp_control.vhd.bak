@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity temp_control is
+    port (
+        clk         : in std_logic;
+        reset       : in std_logic;
+        run         : in std_logic;
+        fast_cool   : in std_logic;
+        open_oven   : in std_logic;
+        temp_up     : in std_logic;
+        temp_down   : in std_logic;
+        current_temp: out integer range 0 to 250
+    );
+end entity;
+
+architecture behavioral of temp_control is
+    signal temp : integer range 0 to 250 := 20; -- Temperatura inicial
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            temp <= 20; -- Reset da temperatura
+        elsif rising_edge(clk) then
+            if run = '1' then
+                if fast_cool = '1' then
+							if temp > 20 then
+                        temp <= temp - 20; -- Resfriamento rápido
+                    end if;
+                elsif open_oven = '1' then
+                    if temp < 250 then
+                        temp <= temp + 10; -- Aquecimento
+                    end if;
+                end if;
+            end if;
+
+            if temp_up = '1' then
+                if temp < 250 then
+                    temp <= temp + 1; -- Aumenta temperatura
+                end if;
+            elsif temp_down = '1' then
+                if temp > 20 then
+                    temp <= temp - 1; -- Diminui temperatura
+                end if;
+            end if;
+        end if;
+    end process;
+
+    current_temp <= temp;
+end architecture;

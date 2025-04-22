@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity AirFryerPrograms is
+    port (
+        SW         : in  std_logic_vector(7 downto 0);
+        user_temp  : in  integer;
+        user_preheat : in integer;
+        user_cook  : in  integer;
+        temp_out   : out integer;
+        preheat_out: out integer;
+        cook_out   : out integer
+    );
+end AirFryerPrograms;
+
+architecture Behavioral of AirFryerPrograms is
+begin
+    process (SW)
+    begin
+        case SW(6 downto 4) is
+            when "000" => -- Default
+                temp_out <= 200;
+                preheat_out <= 0;
+                cook_out <= 18;
+            when "001" => -- User
+                temp_out <= user_temp;
+                preheat_out <= user_preheat;
+                cook_out <= user_cook;
+            when "010" => -- Rissol
+                temp_out <= 180;
+                preheat_out <= 3;
+                cook_out <= 15;
+            when "011" => -- Batata
+                temp_out <= 200;
+                preheat_out <= 5;
+                cook_out <= 20;
+            when "100" => -- Filete
+                temp_out <= 170;
+                preheat_out <= 3;
+                cook_out <= 20;
+            when "101" => -- Hamburger
+                temp_out <= 170;
+                preheat_out <= 5;
+                cook_out <= 20;
+            when others => -- Default fallback
+                temp_out <= 200;
+                preheat_out <= 0;
+                cook_out <= 18;
+        end case;
+    end process;
+end Behavioral;
