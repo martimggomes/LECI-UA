@@ -1,0 +1,31 @@
+
+$TTL 604800
+$ORIGIN martimgomes.pt.
+@        IN      SOA     martimgomes.pt. adm.martigomes.pt. (
+                        2 ; Serial
+                        604800 ; Refresh
+                        86400 ; Retry
+                        2419200 ; Expire
+                        604800) ; Negative Cache TTL
+        IN       NS      ns1.martimgomes.pt.
+ns1      IN      A       203.184.191.249
+@        IN      A       203.184.191.249
+www      IN      A       203.184.191.249
+siteA    IN      A       203.184.191.249
+January         IN       A      172.28.12.1
+March           IN       A      203.184.191.225
+April           IN       A      172.28.13.1
+June            IN       A      203.184.191.193
+July            IN       A      172.28.13.129
+September       IN       A      203.184.191.129
+October         IN       A      172.28.13.193
+December        IN       A      203.184.191.241
+Taurus          IN       A      203.19.48.1
+Gemini          IN       A      172.29.83.65
+Leo             IN       A      203.19.48.33
+Virgo           IN       A      172.29.83.1
+Scorpius        IN       A      172.29.83.161
+Capricornus     IN       A      203.19.48.97
+Aquarius        IN       A      203.19.48.81
+Pisces          IN       A      203.19.48.65
+Horoscope       IN       A      203.19.48.121

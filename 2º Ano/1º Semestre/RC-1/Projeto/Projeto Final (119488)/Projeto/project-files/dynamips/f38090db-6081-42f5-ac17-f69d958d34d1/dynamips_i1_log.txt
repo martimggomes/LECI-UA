@@ -1,0 +1,40 @@
+Nov 25 17:11:19.812 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 25 17:11:19.813 HYPERVISOR: Started on IP = localhost, TCP port = 50384.
+Nov 25 17:11:20.111 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 17:11:20.112 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\MARTIM\Desktop\GNSRC\Projeto\project-files\dynamips 
+Nov 25 17:11:20.117 GENERAL: working_dir=C:\Users\MARTIM\Desktop\GNSRC\Projeto\project-files\dynamips
+Nov 25 17:11:20.117 HYPERVISOR: exec_cmd: ethsw create SW7 
+Nov 25 17:22:18.981 HYPERVISOR: exec_cmd: nio create_udp udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 20009 127.0.0.1 20008 
+Nov 25 17:22:18.981 HYPERVISOR: exec_cmd: ethsw add_nio SW7 udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 
+Nov 25 17:22:18.991 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 1 
+Nov 25 17:22:25.452 HYPERVISOR: exec_cmd: nio create_udp udp-de79fab0-eedf-41d5-b441-e55a3e44b095 20012 127.0.0.1 20013 
+Nov 25 17:22:25.452 HYPERVISOR: exec_cmd: ethsw add_nio SW7 udp-de79fab0-eedf-41d5-b441-e55a3e44b095 
+Nov 25 17:22:25.469 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-de79fab0-eedf-41d5-b441-e55a3e44b095 1 
+Nov 25 17:22:30.932 HYPERVISOR: exec_cmd: nio create_udp udp-2674c781-be8f-40ac-841b-7e722c5c144f 20014 127.0.0.1 20015 
+Nov 25 17:22:30.933 HYPERVISOR: exec_cmd: ethsw add_nio SW7 udp-2674c781-be8f-40ac-841b-7e722c5c144f 
+Nov 25 17:22:30.945 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-2674c781-be8f-40ac-841b-7e722c5c144f 1 
+Nov 25 17:22:34.265 HYPERVISOR: exec_cmd: nio create_udp udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 20016 127.0.0.1 20017 
+Nov 25 17:22:34.266 HYPERVISOR: exec_cmd: ethsw add_nio SW7 udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 
+Nov 25 17:22:34.283 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 1 
+Nov 25 17:22:39.558 HYPERVISOR: exec_cmd: nio create_udp udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 20018 127.0.0.1 20019 
+Nov 25 17:22:39.559 HYPERVISOR: exec_cmd: ethsw add_nio SW7 udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 
+Nov 25 17:22:39.576 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 1 
+Nov 25 17:24:48.247 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 1 
+Nov 25 17:24:48.250 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-de79fab0-eedf-41d5-b441-e55a3e44b095 1 
+Nov 25 17:24:48.281 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-2674c781-be8f-40ac-841b-7e722c5c144f 1 
+Nov 25 17:24:48.336 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 1 
+Nov 25 17:24:48.338 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 1 
+Nov 25 17:24:48.576 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 1 
+Nov 25 17:24:48.581 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-de79fab0-eedf-41d5-b441-e55a3e44b095 1 
+Nov 25 17:24:48.603 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-2674c781-be8f-40ac-841b-7e722c5c144f 1 
+Nov 25 17:24:48.604 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 1 
+Nov 25 17:24:48.605 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 1 
+Nov 25 17:24:48.636 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-e7e2cde1-3837-4e17-a128-7b6d34b9fbce 1 
+Nov 25 17:24:48.637 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-de79fab0-eedf-41d5-b441-e55a3e44b095 1 
+Nov 25 17:24:48.637 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-2674c781-be8f-40ac-841b-7e722c5c144f 1 
+Nov 25 17:24:48.638 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-b68c9e7c-15c1-400c-b29e-a771be69fad3 1 
+Nov 25 17:24:48.638 HYPERVISOR: exec_cmd: ethsw set_access_port SW7 udp-6014b6f3-5ea5-4352-8f19-70a6e2dca474 1 
+Nov 25 19:26:43.346 HYPERVISOR: exec_cmd: ethsw delete SW7 
+Nov 25 19:26:43.488 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 19:26:43.718 HYPERVISOR: Stopped.
+Nov 25 19:26:43.719 GENERAL: reset done.

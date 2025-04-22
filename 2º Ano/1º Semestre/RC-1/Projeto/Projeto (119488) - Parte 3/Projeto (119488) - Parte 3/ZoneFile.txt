@@ -1,0 +1,6 @@
+
+zone "martimgomes.pt" in{
+        type master;
+        file "/etc/bind/db.martimgomes.pt";
+};
+

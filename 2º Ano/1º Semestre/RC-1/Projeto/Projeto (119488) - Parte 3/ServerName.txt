@@ -1,0 +1,4 @@
+search ua.pt
+nameserver 127.0.0.1
+nameserver 192.168.100.1
+

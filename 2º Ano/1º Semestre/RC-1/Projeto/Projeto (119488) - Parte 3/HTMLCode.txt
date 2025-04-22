@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>martimgomes.pt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #3a3a8c;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 1.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #3a3a8c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projeto Redes de Comunicação 2024/2025</h1>
+        <p>Desenvolvido por Martim Gomes</p>
+    </header>
+    <main>
+        <section>
+            <h2>Sobre o Projeto</h2>
+            <p>Este projeto simula o design e configuração de redes de comunicação para duas empres$
+        </section>
+        <section>
+            <h2>Objetivos Principais</h2>
+            <ul>
+                <li>Configurar redes com IPv4 e IPv6.</li>
+                <li>Implementar VLANs para organização de departamentos.</li>
+                <li>Configurar NAT/PAT para acesso à Internet.</li>
+                <li>Hospedar servidores Web para cada empresa.</li>
+            </ul>
+        </section>
+            </ul>
+        </section>
+        <section>
+            <h2>Detalhes Técnicos</h2>
+            <p>O projeto envolve:</p>
+            <ul>
+                <li>Distribuição de endereços IP (públicos e privados).</li>
+                <li>Configuração de routers Cisco e switches Ethernet.</li>
+                <li>Criação de uma aplicação cliente/servidor para um jogo interativo "Adivinhe o N$
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Martim Gomes | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+
+<VirtualHost *:80>
+        DocumentRoot /var/www/html/martimgomes.pt-80
+        ServerName martimgomes.pt
+        ServerAlias www.martimgomes.pt
+        ServerAlias siteA.martimgomes.pt
+        ServerAlias 203.184.191.249
+</VirtualHost>
+
