@@ -1,0 +1,53 @@
+	.data
+k1: 	.double 5.0       # Constante 5.0 (parte do cálculo da conversão Fahrenheit para Celsius).
+k2: 	.double 9.0       # Constante 9.0 (parte do cálculo da conversão Fahrenheit para Celsius).
+k3: 	.double 32.0      # Constante 32.0 (usada para subtração na fórmula).
+k4: 	.double 0.0       # Constante 0.0 (valor inicial de ct).
+k5: 	.double 100.0     # Constante 100.0 (limite superior para o laço).
+
+	.text
+	.globl main            # Declara a função `main` como global, indicando que é o ponto de entrada do programa.
+
+f2c:                   # Função f2c: converte Fahrenheit para Celsius.
+    la $t0, k3
+    l.d $f2, 0($t0)         # $f2 = 32.0
+    sub.d $f0, $f12, $f2    # $f0 = ft - 32.0
+
+    la $t1, k1
+    l.d $f4, 0($t1)         # $f4 = 5.0
+    mul.d $f0, $f0, $f4     # $f0 = 5.0 * (ft - 32.0)
+
+    la $t2, k2
+    l.d $f6, 0($t2)         # $f6 = 9.0
+    div.d $f0, $f0, $f6     # $f0 = (5.0 * (ft - 32.0)) / 9.0
+
+    jr $ra                  # Retorna para main, ct em $f0
+
+main:                       # Função principal.
+    la $t0, k4
+    l.d $f4, 0($t0)         # ct = 0.0
+
+    la $t0, k5
+    l.d $f6, 0($t0)         # $f6 = 100.0
+
+loop:                       # Início do laço.
+    c.le.d $f4, $f6         # Verifica se ct <= 100.0.
+    bc1f end_loop           # Se ct > 100.0, sai do laço.
+
+    li $v0, 7
+    syscall                 # Lê a temperatura em Fahrenheit (ft) do usuário.
+    mov.d $f12, $f0         # Move o valor lido (ft) para `$f12` (parâmetro de entrada para `f2c`).
+
+    jal f2c                 # Chama a função `f2c` para converter Fahrenheit para Celsius.
+
+    li $v0, 3               # Código de syscall para imprimir um valor em ponto flutuante.
+    mov.d $f12, $f0         # Move o valor convertido (`ct`) para `$f12`.
+    syscall                 # Imprime a temperatura em Celsius.
+
+    j loop                  # Volta ao início do laço.
+
+end_loop:                   # Final do laço.
+    li $v0, 10              # Código de syscall para encerrar o programa.
+    syscall
+# Código de syscall para encerrar o programa
+    syscall

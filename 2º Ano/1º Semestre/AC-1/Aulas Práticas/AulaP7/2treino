@@ -1,0 +1,81 @@
+	.data
+str:    .asciiz "ITED - orievA ed edadisrevinU"  # String inicial a ser revertida
+
+	.text
+	.globl main
+
+# Função strrev: Reverte o conteúdo de uma string
+# Entrada: $a0 = ponteiro para o início da string
+# Saída: $v0 = ponteiro para o início da string (revertida)
+strrev:
+    addiu $sp, $sp, -16          # Reserva espaço na stack
+    sw $ra, 0($sp)               # Guarda o endereço de retorno
+    sw $s0, 4($sp)               # Salva $s0
+    sw $s1, 8($sp)               # Salva $s1
+    sw $s2, 12($sp)              # Salva $s2
+
+    move $s0, $a0                # $s0 = str (início da string)
+    move $s1, $a0                # $s1 = p1 (ponteiro para o início)
+    move $s2, $a0                # $s2 = p2 (ponteiro para o final)
+
+# Localiza o fim da string (p2 aponta para o terminador '\0')
+while1: 
+    lb $t0, 0($s2)               # Carrega o byte atual (*p2)
+    beq $t0, '\0', endWhile1    # Se *p2 == '\0', termina o loop
+    addiu $s2, $s2, 1            # Incrementa p2
+    j while1
+
+endWhile1:
+    addiu $s2, $s2, -1           # p2 aponta para o último caractere (antes de '\0')
+
+# Reverte a string (troca caracteres de p1 e p2 enquanto p1 < p2)
+while2:
+    bge $s1, $s2, endWhile2      # Se p1 >= p2, termina o loop
+    move $a0, $s1                # $a0 = p1 (argumento 1 para exchange)
+    move $a1, $s2                # $a1 = p2 (argumento 2 para exchange)
+    jal exchange                 # Chama a função exchange(p1, p2)
+    addiu $s1, $s1, 1            # Incrementa p1
+    addiu $s2, $s2, -1           # Decrementa p2
+    j while2
+
+endWhile2:
+    move $v0, $s0                # Retorna o ponteiro da string inicial (str)
+    lw $ra, 0($sp)               # Restaura o endereço de retorno
+    lw $s0, 4($sp)               # Restaura $s0
+    lw $s1, 8($sp)               # Restaura $s1
+    lw $s2, 12($sp)              # Restaura $s2
+    addiu $sp, $sp, 16           # Libera espaço na stack
+    jr $ra                       # Retorna da função
+
+# Função exchange: Troca os valores apontados por dois ponteiros
+# Mapa de registos:
+# $a0 = c1 
+# $a1 = c2
+
+exchange:
+    addiu $sp, $sp, -8           # Reserva espaço na stack
+    sw $ra, 0($sp)               # Guarda o endereço de retorno
+    sw $t0, 4($sp)               # Salva valor temporário de $t0
+
+    lb $t0, 0($a0)               # $t0 = *c1
+    lb $t1, 0($a1)               # $t1 = *c2
+    sb $t1, 0($a0)               # *c1 = *c2
+    sb $t0, 0($a1)               # *c2 = *c1
+
+    lw $t0, 4($sp)               # Restaura $t0
+    lw $ra, 0($sp)               # Restaura $ra
+    addiu $sp, $sp, 8            # Libera espaço na stack
+    jr $ra                       # Retorna da função
+
+# Função principal: Testa a função strrev
+main:
+    la $a0, str                  # Carrega o endereço da string inicial em $a0
+    jal strrev                   # Chama a função strrev(str)
+    move $a0, $v0                # $a0 recebe o ponteiro retornado (string revertida)
+
+    li $v0, 4                    # Configura a syscall para imprimir string (print_string)
+    syscall                      # Imprime a string revertida
+
+    move $v0, $t1 
+
+	

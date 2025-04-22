@@ -1,0 +1,259 @@
+	.eqv SIZE,10
+	.data
+arr:	.space 80
+x0:	.float 0.0
+xn:	.double 1.0
+x05:	.double 0.5
+k0:	.double 0.0
+k5:	.double 5.0	
+k9:	.double 9.0
+k32:	.double 32.0
+k100:	.double 100.0
+x1:	.float 1.0
+	.text
+	.globl main
+	
+main:
+	addiu $sp,$sp,-4
+	sw $ra,0($sp)
+	
+	li $t0,0		#i = 0
+	la $t2,arr		#$t1 = &arr[o]
+	
+for:
+	bge $t0,SIZE,endfor	#i < SIZE
+	sll $t1,$t0,3		#i * 8
+	addu $t3,$t2,$t1	#&arr[i]
+	
+	li $v0,7		#read_double()
+	syscall
+	s.d $f0,0($t3)		#arr[i] = read_double()
+	
+	addi $t0,$t0,1		#i++
+	j for
+	
+endfor:
+	la $a0,arr
+	li $a1,SIZE
+	jal average		#average(arr, SIZE)
+	mov.d $f12,$f0		#
+	li $v0,3		#print_double(average(arr, SIZE))
+	syscall
+	
+	la $a0,arr
+	li $a1,SIZE
+	jal var			#var(arr, SIZE)
+	mov.d $f12,$f0		#	
+	li $v0,3		#print_double(var(arr, SIZE))
+	syscall
+	
+	la $a0,arr
+	li $a1,SIZE
+	jal stdev		#stdev(arr, SIZE)
+	mov.d $f12,$f0		#
+	li $v0,3		#print_double(stdev(arr, SIZE))
+	syscall
+	
+	li $v0,0		#return 0
+	
+	lw $ra,0($sp)
+	addiu $sp,$sp,4
+	
+	jr $ra
+
+#Mapa de registos
+# i : $t0
+# media : $f2
+# soma : $f4
+# array[i] : $f6
+var:
+	addiu $sp,$sp,-12
+	sw $ra,0($sp)
+	sw $s0,4($sp)
+	sw $s1,8($sp)
+	
+	move $s0,$a0
+	move $s1,$a1
+	
+	move $a0,$s0
+	move $a1,$s1
+	jal average
+	
+	cvt.s.d $f0,$f0		#(float)average(array, val)
+	mov.s $f2,$f0		#media = (float)average(array, val)
+	
+	li $t0,0		#i = 0
+	
+	la $t1,x0		#
+	l.s $f4,0($t1)		#soma = 0.0
+	
+	
+for1:
+	bge $t0,$s1,endfor1	#i < nval
+	
+	sll $t0,$t0,3		#i * 8
+	addu $t2,$s0,$t0	#&array[i]
+	l.d $f6,0($t2)		#array[i]
+	cvt.s.d	$f6,$f6		#float(array[i])
+	
+	sub.s $f12,$f6,$f2	#$f12 = (float)array[i] - media
+	li $a0,2		#
+	jal xtoy
+	
+	add.s $f4,$f4,$f0	#soma += xtoy((float)array[i] - media, 2)	
+	
+	addi $t0,$t0,1		#i++
+	j for1
+endfor1:
+	cvt.d.s $f4,$f4		#(double)soma
+	
+	mtc1 $s1,$f8
+	cvt.d.w $f8,$f8		#(double)nval
+	
+	div.d $f0,$f4,$f8	#return (double)soma / (double)nval
+		
+	move $a0,$s0
+	move $a1,$s1
+
+	lw $ra,0($sp)
+	lw $s0,4($sp)
+	lw $s1,8($sp)
+	addiu $sp,$sp,12
+	
+	jr $ra
+	
+	
+#func stdev
+stdev:
+	addiu $sp,$sp,-12
+	sw $ra,0($sp)
+	sw $s0,4($sp)
+	sw $s1,8($sp)
+	
+	move $s0,$a0
+	move $s1,$a1
+	
+	move $a0,$s0
+	move $a1,$s1
+	jal var
+	
+	mov.d $f12,$f0
+	jal sqrt
+	
+	lw $ra,0($sp)
+	lw $s0,4($sp)
+	lw $s1,8($sp)
+	addiu $sp,$sp,12
+
+	jr $ra
+
+
+#Func sqrt
+sqrt:
+	la $t1,xn
+	l.d $f0,0($t1)		#xn = 1.0
+	
+	la $t1,x0
+	l.d $f4,0($t1)		#$f4 = 0.0
+	
+	la $t1,x05
+	l.d $f6,0($t1)		#$f6 = 0.5
+	
+	li $t0,0		#i = 0
+	
+if:
+	c.le.d $f12,$f4		#val > 0.0
+	bc1t else
+
+do:
+	mov.d $f2,$f0		#aux = xn
+	div.d $f8,$f12,$f0	#$f8 = val / xn
+	add.d $f8,$f0,$f8	#$f8 = xn + (val / xn)
+	mul.d $f0,$f6,$f8	#xn = 0.5 * (xn + val/xn)
+	
+	c.eq.d $f2,$f0		#aux != xn
+	bc1t endif
+	addi $t0,$t0,1		#i++
+	blt $t0,25,do		#++i < 25
+	
+else:
+	mov.d $f0,$f4		#xn = 0.0
+endif:
+	jr $ra
+
+
+
+#Func average
+average:
+	addi $t0,$a1,-1		#int i = n-1;
+	
+	la $t1,k0
+	l.d $f0,0($t1)		#double sum = 0.0;
+	
+for2:
+	blt $t0,0,endfor2	#i >= 0;
+	
+	sll $t1,$t0,3		# i * 8
+	addu $t2,$a0,$t1	#&array[i]
+	l.d $f2,0($t2)		#array[i]
+	
+	add.d $f0,$f0,$f2	#sum += array[i];
+	
+	addi $t0,$t0,-1		#i--
+	j for2
+endfor2:
+	mtc1 $a1,$f4
+	cvt.d.w $f4,$f4
+	div.d $f0,$f0,$f4
+	
+	jr $ra
+	
+#func xtoy
+xtoy:
+	addiu $sp,$sp,-12
+	sw $ra,0($sp)
+	sw $s0,4($sp)
+	s.s $f20,8($sp)
+	
+	move $s0,$a0
+	mov.s $f20,$f12
+
+	li $t0,0	#i = 0
+	
+	la $t1,x1	#
+	l.s $f0,0($t1)	#result = 1.0
+	
+	move $a0,$s0
+	jal abs
+	move $t2,$v0	# $t2 = abs(y)
+	
+for3:
+	bge $t0,$t2,endfor3	# i < abs(y)
+
+if4:
+	ble $s0,0,else2		#y > 0
+	mul.s $f0,$f0,$f20	#result *= x;
+	j endif4			#
+	
+else2:
+	div.s $f0,$f0,$f20	#result /= x;;
+	
+endif4:		
+	addi $t0,$t0,1		#i++
+	j for3
+	
+endfor3:
+	lw $ra,0($sp)
+	lw $s0,4($sp)
+	l.s $f20,8($sp)
+	addiu $sp,$sp,12
+	jr $ra
+	
+	
+abs:
+if5: 
+	bge $a0,0,endif5	#val < 0
+	sub $a0,$0,$a0		#val = -val; 
+endif5:
+	move $v0,$a0		#return val
+	jr $ra

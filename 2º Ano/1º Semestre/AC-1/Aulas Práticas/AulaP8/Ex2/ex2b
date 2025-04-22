@@ -1,0 +1,59 @@
+	.data
+    .eqv    MAX_STR_SIZE, 33   # Define MAX_STR_SIZE como 33
+    .eqv    read_int, 5        # Código da syscall read_int
+    .eqv    print_string, 4    # Código da syscall print_string
+str:    .space  33         # Buffer para strings
+
+	.text
+    .globl main
+
+main:                           # int main(void)
+    addiu   $sp, $sp, -8        # Reserva espaço na stack
+    sw      $ra, 0($sp)         # Salva o registrador de retorno
+    sw      $s0, 4($sp)         # Salva o registrador $s0
+    move    $s0, $a2            # Guarda o buffer da string (str) em $s0
+
+do:                             # do {
+    li      $v0, read_int       # Chama read_int()
+    syscall                     # Faz a leitura
+    move    $s1, $v0            # Armazena o valor lido em $s1 (val)
+
+    # Converte e imprime em base 2
+    move    $a0, $s1            # Passa val como parâmetro
+    li      $a1, 2              # Define base 2
+    move    $a2, $s0            # Passa o buffer str
+    jal     itoa                # Chama itoa(val, 2, str)
+
+    move    $a0, $s0            # Prepara a string para impressão
+    li      $v0, print_string   # Chama print_string()
+    syscall                     # Imprime a string
+
+    # Converte e imprime em base 8
+    move    $a0, $s1
+    li      $a1, 8
+    move    $a2, $s0
+    jal     itoa
+
+    move    $a0, $s0
+    li      $v0, print_string
+    syscall
+
+    # Converte e imprime em base 16
+    move    $a0, $s1
+    li      $a1, 16
+    move    $a2, $s0
+    jal     itoa
+
+    move    $a0, $s0
+    li      $v0, print_string
+    syscall
+
+while:
+    bne     $s1, 0, do          # Enquanto val != 0
+
+    # Finalização do programa
+    li      $v0, 0
+    lw      $ra, 0($sp)         # Restaura $ra
+    lw      $s0, 4($sp)         # Restaura $s0
+    addiu   $sp, $sp, 8         # Libera espaço na stack
+    jr      $ra                 # Retorna

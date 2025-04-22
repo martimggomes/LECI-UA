@@ -1,0 +1,44 @@
+	.data
+str:   	.asciiz "2020 e 2024 sao anos bissextos"  
+	.text
+	.globl main
+
+# Mapa de registos
+# res: $v0
+# s: $a0
+# *s: $t0
+# digit: $t1
+# Sub-rotina terminal: não devem ser usados registos $sx
+
+atoi:
+    li $v0, 0            # res = 0
+
+while:
+	
+    li $t3,'0'
+    li $t4,'9'
+	
+    lb $t0, 0($a0)       # Carrega o byte apontado por $a0 (caractere *s)
+    blt $t0, $t3, endw   # Se *s < '0', sai do loop
+    bgt $t0, $t4, endw   # Se *s > '9', sai do loop
+    
+    sub $t1, $t0, $t3   # digit = *s - '0'
+    mulu $v0, $v0, 10    # res = res * 10
+    addu $v0, $v0, $t1   # res = res + digit
+    
+    addi $a0, $a0, 1     # Incrementa o ponteiro s (s++)
+    j while              # Repete o loop
+
+endw:
+    jr $ra               # Retorna da sub-rotina
+
+main:
+    la $a0, str          # Carrega o endereço de 'str' em $a0
+    jal atoi             # Chama a função atoi
+    
+    move $a0, $v0        # Move o resultado de atoi (em $v0) para $a0
+    li $v0, 1            # Serviço para imprimir um inteiro
+    syscall              # Chama o sistema para imprimir o inteiro
+    
+    li $v0, 10           # Serviço para terminar o programa
+    syscall              # Chama o sistema para encerrar o programa

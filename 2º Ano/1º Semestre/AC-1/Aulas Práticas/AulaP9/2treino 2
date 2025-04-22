@@ -1,0 +1,56 @@
+	.data
+k1: 	.double 5.0       # Constante 5.0 (parte do cálculo da conversão Fahrenheit para Celsius).
+k2: 	.double 9.0       # Constante 9.0 (parte do cálculo da conversão Fahrenheit para Celsius).
+k3: 	.double 32.0      # Constante 32.0 (usada para subtração na fórmula).
+k4: 	.double 0.0       # Constante 0.0 (valor inicial de ct).
+k5: 	.double 100.0     # Constante 100.0 (limite superior para o laço).
+	.text
+	.globl main
+	
+#Mapa de registos:	
+# ft: $f12	
+
+f2c:
+	la $t0,k3
+	l.d $f2,0($t0)
+	sub.d $f0,$12,$f2
+	
+	la $t1,k1
+	l.d $f4,0($t1)
+	mul.d $f0,$f0,$f4
+	
+	la $t2,k2
+	l.d $f6,0($t2)
+	div.d $f0,$f0,$f6
+	
+	jr $ra
+	
+main:
+	la $t0,k4
+	l.d $f4,0($t0)		# ct = 0.0
+	
+	la $t1,k5
+	l.d $f6,0($t1)
+	
+while:
+	c.le.d $f4,$f6
+	bc1f endw
+	
+	li $v0,7
+	syscall
+	mov.d $f12,$f0
+	
+	jal f2c
+	
+	li $v0,3
+	mov.d $f12,$f0
+	syscall
+	
+	j while
+	
+	
+endw:
+
+	li $v0,0
+	syscall
+	

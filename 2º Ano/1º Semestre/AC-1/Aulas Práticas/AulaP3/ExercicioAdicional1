@@ -1,0 +1,52 @@
+	.data
+str1:	.asciiz "Introduza um número: "
+str2:	.asciiz "\nValor em código Gray: "
+str3:	.asciiz "\nValor em binário: "
+	.text
+	.globl main
+	
+# Mapa de registos
+# gray: $t0
+# bin: $t1
+# mask: $t2
+
+main: 	li $v0,4
+	la $a0,str1		# print_string("Introduza um numero: ")
+	syscall
+	
+	li $v0,5
+	syscall			# gray = read_int()
+	move $t0,$v0
+	
+	srl $t3,$t0,1		# $t3 = gray >> 1
+	move $t2,$t3		# mask = gray >> 1
+	
+	move $t1,$t0		# bin = gray
+	
+while:	beq $t2,0,endwhl	# while(mask != 0)
+
+	xor $t4,$t1,$t2		# $t4 = bin ^ mask
+	move $t1,$t4		# bin = bin ^ mask
+	
+	srl $t2,$t2,1		# mask = mask >> 1
+	
+	j while
+	
+endwhl:	li $v0,4
+	la $a0,str2		# print_string("\nValor em código Gray: ")
+	syscall
+	
+	li $v0,34
+	move $a0,$t0		# print_int16(gray)
+	syscall
+	
+	li $v0,4
+	la $a0,str3		# print_string("\nValor em binario: ")
+	syscall
+	
+	li $v0,34
+	move $a0,$t1		# print_int16(bin)
+	syscall
+	
+	jr $ra
+	

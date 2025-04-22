@@ -1,0 +1,47 @@
+	.data
+x35:	.double 0.35
+s2:	.asciiz "Str_1"
+	.space 8
+	.word 2023
+	.align 3
+	.double 2.718281828459045
+	.asciiz "Str_2"
+	.space 11
+	.text
+	.globl main
+	
+f2:
+	lw $t0,0($sp)
+	
+	l.d $f2,24($t0)			# p -> g
+	
+	lw $t1,16($t0)
+	mtc1 $t1,$f4			# $F4 = envio para registo flutuante de p -> i
+	cvt.d.w $f4,$f4			# (double) p -> i
+	
+	mul.d $f6,$f2,$f4		# p->g * (double)p->i
+	
+	la $t2,x35
+	l.d $f8,0($t2)			# $f8 = 0.35
+	
+	div.d $f0,$f6,$f8 		# $f0 = return p->g * (double)p->i / 0.35
+	
+	jr $ra
+	
+main:	
+	addiu $sp,$sp,-8
+	sw $ra,4($sp)
+	
+	la $a0,s2
+	sw $a0,0($sp)
+	
+	jal f2
+	
+	mov.d $f12,$f0
+	li $v0,3
+	syscall
+	
+	lw $ra, 4($sp)           # Restaurar $ra
+    	addiu $sp, $sp, 8        # Restaurar a pilha
+    	li $v0, 0                # Código de retorno 0
+    	jr $ra                   # Retornar ao sistema

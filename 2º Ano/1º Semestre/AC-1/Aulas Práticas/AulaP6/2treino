@@ -1,0 +1,34 @@
+	.eqv SIZE,3
+	.data
+str1:	.asciiz "Array"
+str2:	.asciiz "de"
+str3:	.asciiz "ponteiros"
+array:	.word str1,str2,str3
+	.text
+	.globl main
+	
+#Mapa de registos
+# p: $t1
+# pultimo: $t2
+
+main:	la $t1, array             # $t1 = p = &array[0] = array
+    	li $t0, SIZE              # Carrega o valor de SIZE
+    	sll $t0, $t0, 2           # Multiplica SIZE por 4 (tamanho de cada ponteiro)
+    	addu $t2, $t1, $t0        # $t2 = pultimo = array + SIZE * 4
+
+for:	bge $t1,$t2,endf
+	
+	lw $a0,0($t1)		  # Carrega o conteúdo de array[i] em $a0 (endereço da string)
+	li $v0,4		  # print_string(*p)
+	syscall
+	
+	li $a0,'\n'
+	li $v0,11		  # print_char('\n')
+	syscall
+	
+	addi $t1,$t1,4		   # p++
+	
+	j for			   # Repetir o loop
+
+endf:	jr $ra
+	

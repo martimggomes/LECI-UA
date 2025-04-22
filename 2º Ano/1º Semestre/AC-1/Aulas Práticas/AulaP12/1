@@ -1,0 +1,114 @@
+	.data
+	.eqv MAX_STUDENTS, 2
+str1:	.asciiz "\nN. Mec: "
+str2:	.asciiz "\nPrimeiro Nome: "
+str3:	.asciiz "\nUltimo Nome: "
+str4:	.asciiz "\nNota: "
+	.align 2
+st_array: .space 176
+	
+	.align 2
+madia:	.space 4
+	.text
+	.globl main
+
+# Mapa de registos: 
+# st: $a0 -> $t0
+# ns: $a1 -> $t1
+# i: $t2
+
+read_data:	
+	move $t0,$a0
+	move $t1,$a1
+	
+	li $t2,0			# i = 0
+	
+for:    bge $t2,$t1,endf        	# while(i < ns) {
+    	la $a0,str1
+    	li $v0,4
+    	syscall                		#print_string("N. Mec: ");
+
+    	li $v0,5
+    	syscall
+
+    	mul $t3,$t2,44            	#i * 44
+    	addu $t3,$t0,$t3        	#$t3 = &st[i]
+    	sw $v0,0($t3)            	#st[i].id_number
+
+    	li $v0,4            		#print_string()
+    	la $a0,str2
+    	syscall                		#print_string("Primeiro Nome: ")
+
+    	addiu $a0,$t3,4
+    	li $a1,17
+    	li $v0,8            		#read_string()
+    	syscall
+
+    	li $v0,4            		#print_string()
+    	la $a0,str3
+    	syscall                		#print_string("Ultimo Nome: ")
+
+    	addiu $a0,$t3,22
+    	li $a1,14
+    	li $v0,8            		#read_string()
+    	syscall
+
+    	li $v0,4            		#print_string()
+    	la $a0,str4
+    	syscall                		#print_string("Nota: ")
+
+    	li $v0,6            		#read_float()
+    	syscall
+			        	#offsets no guião da aula 11 (tabela)
+    	s.s $f0,40($t3)            	#st[i].grade = read_float();
+
+    	addi $t2,$t2,1        		#i++
+    	j for            		#}
+
+endf:
+    jr $ra
+    
+# Mapa de registos:
+# p: $a0
+
+print_student:
+	
+	move $t0,$a0
+	
+	lw $a0,0($a0)
+	
+	li $v0,16		
+	syscall				# print_intu10(p->id_number)
+	
+	addiu $a0,$t0,4
+	li $v0,4
+	syscall				# print_string(p->first_name)
+	
+	addiu $a0,$t0,22
+	li $v0,4
+	syscall				# print_string(p->last_name)
+	
+	l.s $f12,40($a0)
+	li $v0,2
+	syscall				# print_float(p->grade)
+	
+
+main:	
+	addiu $sp,$sp,-4
+	sw $ra,0($sp)
+	
+	la $a0,st_array
+	li $a1,MAX_STUDENTS
+	
+	jal read_data			# read_data( st_array, MAX_STUDENTS )
+	
+	li $a0,10
+	
+	jal print_student		# print_student( pmax )
+	
+	li $v0,0			# return 0
+	
+	lw $ra,0($sp)
+	addiu $sp,$sp,4
+	
+	jr $ra

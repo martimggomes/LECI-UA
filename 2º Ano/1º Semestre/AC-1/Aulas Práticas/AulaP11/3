@@ -1,0 +1,55 @@
+	.data
+x35:	.double 0.35
+s2:     .ascii "Str_1"                  # a1[14] (sem caractere nulo)
+        .space 10                        # Completar 14 bytes de a1
+        .word 2023                      # i
+        .align 3
+        .double 2.718281828459045       # g
+        .ascii "Str_2"                  # a2[17] (sem caractere nulo)
+        .space 6                        # Completar 17 bytes de a2 (padding)
+	.text
+	.globl main
+
+f2:
+    # Carregar endereço do ponteiro p
+    lw $t0, 0($sp)          # $t0 = p (endereço de `xyz`)
+
+    # Carregar o campo g (double) no endereço 24(p)
+    l.d $f2, 24($t0)        # $f2 = p->g
+
+    # Carregar o campo i (int) no endereço 16(p)
+    lw $t1, 16($t0)         # $t1 = p->i
+    mtc1 $t1, $f4           # Mover p->i para registrador de ponto flutuante
+    cvt.d.w $f4, $f4        # Converter p->i para double, armazenado em $f4
+
+    # Multiplicar g * (double)i
+    mul.d $f6, $f2, $f4     # $f6 = p->g * (double)p->i
+
+    # Dividir por 0.35
+    la $t2, x35      # Carregar endereço de constante
+    l.d $f8, 0($t2)         # $f8 = 0.35 (constante em double)
+    div.d $f0, $f6, $f8     # $f0 = (p->g * (double)p->i) / 0.35
+
+    # Retornar resultado em $f0
+    jr $ra                  # Retorna para o chamador
+
+main:
+    # Ajustar a pilha e salvar o registrador de retorno
+    addiu $sp, $sp, -8
+    sw $ra, 4($sp)
+
+    # Passar endereço de s2 para a função f2
+    la $a0, s2               # $a0 = endereço de s2
+    sw $a0, 0($sp)           # Salvar $a0 na pilha
+    jal f2                   # Chamar f2
+
+    # Imprimir o resultado (double)
+    mov.d $f12, $f0          # Resultado de f2 para $f12
+    li $v0, 3                # Código de syscall para print_double
+    syscall
+
+    # Restaurar registradores e terminar
+    lw $ra, 4($sp)           # Restaurar $ra
+    addiu $sp, $sp, 8        # Restaurar a pilha
+    li $v0, 0                # Código de retorno 0
+    jr $ra                   # Retornar ao sistema

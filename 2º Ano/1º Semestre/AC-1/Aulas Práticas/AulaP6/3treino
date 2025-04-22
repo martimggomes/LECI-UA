@@ -1,0 +1,76 @@
+	.eqv SIZE, 3
+	.data
+str1:	.asciiz "Array"
+str2:	.asciiz "de"
+str3:	.asciiz "ponteiros"
+str4:	.asciiz "\nString #"
+str5:	.asciiz ": "
+array:	.word str1, str2, str3
+	.text
+	.globl main
+	
+# Mapa de registradores
+# i: $t0
+# j: $t1
+# array[i][j]: $t3
+# &array[0]: $t2
+
+main:
+	li $t0, 0				# i = 0
+
+for:
+	bge $t0, SIZE, endf		# if i >= SIZE, exit loop
+	
+	# Print "String #" com nova linha
+	la $a0, str4
+	li $v0, 4		        # syscall para print_string
+	syscall
+
+	# Print do inteiro i
+	move $a0, $t0			# ATENÇÃO (ERREI NISTO), QUANDO É DE UMA VARIÁVEL USA-SE O MOVE!!!!
+	li $v0, 1			    # syscall para print_int
+	syscall
+	
+	# Print ": "
+	la $a0, str5
+	li $v0, 4		        # syscall para print_string
+	syscall
+	
+	# Inicializar j = 0
+	li $t1, 0			
+
+while:					    # while(array[i][j] != '\0')
+	la $t2, array			# $t2 = endereço de array[0]
+	sll $t3, $t0, 2			# $t3 = i * 4 (cada entrada de array é 4 bytes)
+	addu $t3, $t2, $t3		# $t3 = &array[i]
+	lw $t2, 0($t3)			# $t2 = array[i] (endereço da string i-ésima)
+	addu $t3, $t2, $t1		# $t3 = &array[i][j]
+	lb $t3, 0($t3)			# $t3 = array[i][j]
+	
+	beq $t3, '\0', endw		# if array[i][j] == '\0', exit loop
+	
+	# Print caractere array[i][j]
+	move $a0, $t3
+	li $v0, 11			    # syscall para print_char
+	syscall
+	
+	# Print caractere '-'
+	li $a0, '-'
+	li $v0, 11			    # syscall para print_char
+	syscall
+	
+	# Incrementa j
+	addi $t1, $t1, 1
+	
+	j while
+
+endw:
+	# Incrementa i
+	addi $t0, $t0, 1
+	
+	j for
+
+endf:
+	jr $ra
+
+	

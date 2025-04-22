@@ -1,0 +1,32 @@
+	.data
+str1:	.asciiz "Valor de x: "
+str2:	.asciiz "Resultado: "
+	.text
+	.globl main
+			
+main:
+	addiu $sp,$sp,-4
+	sw $ra,0($sp)
+	
+	la $a0,str1
+	li $v0,4
+	syscall					# print_string(str1)
+	
+	li $v0,7
+	syscall
+	mov.d $f12,$f0				# val = read_double()
+	
+	jal sqrt2				# xtoy(val)
+	
+	la $a0, str2		
+	li $v0, 4	
+	syscall					# print_string(str2)
+	
+	mov.d $f12,$f0		
+	li $v0,3	
+	syscall					# print_double(return(xtoy(val)))
+	
+	lw $ra,0($sp)
+	addiu $sp,$sp,4
+	
+	jr $ra

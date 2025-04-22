@@ -1,0 +1,35 @@
+    	.data
+str:    .asciiz "Arquitetura de Computadores I"  # Define a string estática
+    	.text
+        .globl main
+
+main:
+    addiu $sp,$sp,-4
+    sw $ra,0($sp)
+    
+    la $a0,str
+    jal strlen
+    move $a0,$v0
+    li $v0,1
+    syscall
+    
+    li $v0, 0
+    
+    lw $ra,0($sp)
+    addiu $sp,$sp,4
+    jr $ra
+
+# Função strlen
+strlen:
+    li $t1, 0                # Inicializa o contador de comprimento (len = 0)
+
+while:
+    lb $t0, 0($a0)           # Carrega o byte apontado por $a0 para $t0
+    beq $t0, '\0', endw      # Se o byte for '\0', sai do loop
+    addi $t1, $t1, 1         # Incrementa o comprimento (len++)
+    addiu $a0, $a0, 1        # Avança o ponteiro para o próximo caracter
+    j while                  # Volta ao início do loop
+
+endw:
+    move $v0, $t1            # Coloca o comprimento calculado em $v0
+    jr $ra                   # Retorna para o endereço armazenado em $ra

@@ -1,0 +1,50 @@
+	.eqv SIZE,20
+	.data
+str:	.space 21
+str1:	.asciiz "Introduza uma string: "
+	.text
+	.globl main
+	
+#Mapa de registos
+#p  : $t0
+#*p : $t1
+
+main:
+	li $v0,4	#print_string
+	la $a0,str	#print_string(str1)
+	syscall
+	
+	li $v0,8	#read_string
+	la $a0,str
+	li $a1,SIZE
+	syscall		#read_string(str, SIZE)
+	
+	la $t0,str	#p = str
+	
+while:
+	lb $t1,0($t0)		#$t1 = *p
+	beq $t1,'\0',endw	#*p != '\0'
+	
+	# Verifica se *p está entre 'a' e 'z'
+	li $t2,'a'              # carrega 'a' em $t2
+	li $t3,'z'              # carrega 'z' em $t3
+	blt $t1,$t2,skip        # se *p < 'a', pula a conversão
+	bgt $t1,$t3,skip        # se *p > 'z', pula a conversão
+	
+	# Converte *p para maiúsculo: *p = *p - 'a' + 'A' (ou *p - 0x20)
+	li $t4,0x20               # diferença entre maiúsculo e minúsculo em ASCII
+	sub $t1,$t1,$t4         # *p = *p - 32 (converte para maiúsculo)
+	sb $t1,0($t0)           # armazena o caractere convertido em *p
+	
+skip:
+	addi $t0,$t0,1          # p++
+	j while                 # volta para o início do laço
+	
+endw:
+	li $v0,4	#print_string
+	la $a0,str
+	syscall		#print_string(str)
+
+	jr $ra
+	
+ 	

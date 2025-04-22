@@ -1,0 +1,55 @@
+	.data
+	.eqv MAX_STR_SIZE, 33
+str:	.space 33
+	.text
+	.globl main
+	
+main:
+	addiu $sp,$sp,-8
+	sw $ra,0($sp)
+	sw $s0,4($sp)
+	move $s0, $a2			# $s0 = str	
+	
+do:
+	li $v0,5
+	syscall
+	move $s1,$v0			# $s1 = val
+	
+	move $a0,$s1
+	li $a1,2
+	move $a2,$s0
+	jal itoa
+	
+	move $a0,$s0
+	li $v0,4
+	syscall
+	
+	# Converte e imprime em base 8
+    	move    $a0, $s1
+    	li      $a1, 8
+    	move    $a2, $s0
+    	jal     itoa
+
+    	move    $a0, $s0
+    	li      $v0, print_string
+    	syscall
+
+    	# Converte e imprime em base 16
+    	move    $a0, $s1
+    	li      $a1, 16
+    	move    $a2, $s0
+    	jal     itoa
+
+    	move    $a0, $s0
+    	li      $v0, print_string
+    	syscall
+    	
+while:
+	beq $s1,0,do
+	
+	li $v0,0
+	
+	lw $ra,0($sp)
+	lw $s0,4($sp)
+	addiu $sp,$sp,8
+	jr $ra

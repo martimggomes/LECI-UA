@@ -1,0 +1,35 @@
+	.data
+k1: 	.float 2.59375     # Define a constante real k1 com o valor 2.59375.
+k2: 	.float 0.0         # Define a constante real k2 com o valor 0.0.
+
+	.text
+	.globl main            # Declara a função `main` como global, para que seja o ponto de entrada do programa.
+
+main:                  # Rótulo para a função principal, onde a execução começa.
+
+do:	
+	li $v0,5            # Carrega no registrador $v0 o código do syscall para leitura de um inteiro.
+	syscall             # Executa o syscall (lê um número inteiro do teclado).
+	move $t0,$v0        # Move o valor lido ($v0) para o registrador $t0.
+
+	mtc1 $t0,$f0        # Move o valor inteiro de $t0 para o registrador de ponto flutuante $f0.
+	cvt.s.w $f0,$f0     # Converte o valor em $f0 de inteiro para ponto flutuante.
+
+	la $t0,k1           # Carrega o endereço da constante k1 em $t0.
+	l.s $f2,0($t0)      # Carrega o valor de ponto flutuante armazenado em k1 para o registrador $f2.
+	mul.s $f0,$f0,$f2   # Multiplica o valor em $f0 pelo valor em $f2 e armazena o resultado em $f0.
+
+	mov.s $f12,$f0      # Move o valor de $f0 para $f12 (necessário para o syscall de impressão).
+	li $v0,2            # Carrega no registrador $v0 o código do syscall para imprimir um número em ponto flutuante.
+	syscall             # Executa o syscall (imprime o resultado em ponto flutuante).
+
+	la $t0,k2           # Carrega o endereço da constante k2 em $t0.
+	l.s $f2,0($t0)      # Carrega o valor de ponto flutuante armazenado em k2 para o registrador $f2.
+	c.eq.s $f0,$f2      # Compara se o valor em $f0 é igual a $f2 (0.0).
+	bc1f do             # Se $f0 não for igual a $f2, volta para o início do loop (rótulo `do`).
+
+endw:	
+	li $v0,0            # Carrega no registrador $v0 o código do syscall para terminar o programa.
+	jr $ra              # Retorna ao endereço armazenado em $ra (fim do programa).
+
+	

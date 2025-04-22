@@ -1,0 +1,71 @@
+	.data
+str1:	.asciiz "Arquitetura de "
+str2:	.space 50
+str3:	.asciiz "\n"
+str4:	.asciiz "Computadores I"
+	.text
+	.globl main
+	
+main:
+	addiu $sp,$sp,-4
+	sw $ra,0($sp)
+	
+	la $a0,str2
+	la $a1,str1
+	jal strcpy
+	
+	move $a0,$v0
+	li $v0,4
+	syscall
+	
+	la $a0,str3
+	li $v0,4
+	syscall
+	
+	la $a0,str2
+	la $a1,str3
+	jal strcat
+	move $a0,$v0
+	li $v0,4
+	syscall
+	
+	move $a0,$v0
+	
+strcpy:
+    move $t2, $a0                    # Salva o ponteiro inicial de dst em $t2
+
+do:
+    lb $t1, 0($a1)                   # Carrega o caractere atual de src em $t1
+    sb $t1, 0($a0)                   # Armazena o caractere atual em dst
+    addiu $a0, $a0, 1                # Incrementa o ponteiro de dst
+    addiu $a1, $a1, 1                # Incrementa o ponteiro de src
+    bne $t1, '\0', do                # Repete o loop enquanto t1 != '\0'
+
+    move $v0, $t2                    # Retorna o ponteiro inicial de dst
+    jr $ra                           # Retorna à função chamadora
+
+# Entrada: $a0 = ponteiro para dst, $a1 = ponteiro para src
+# Saída: $v0 = ponteiro para dst
+
+strcat:
+	addiu $sp,$sp,-8
+	sw $ra,0($sp)
+	sw $s0,4($sp)
+	
+	move $s0,$a0
+	
+while2:	
+	lb $t0,0($a0)
+	beq $t0,'\0',endw2
+	addiu $a0,$a0,1
+	j while2
+	
+endw2:
+	jal strcpy
+	
+	move $v0,$s0
+	
+	lw $ra,0($sp)
+	lw $s0,4($sp)
+	addiu $sp,$sp,8
+	jr $ra

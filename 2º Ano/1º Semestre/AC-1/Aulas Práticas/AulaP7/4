@@ -1,0 +1,86 @@
+	.data
+str1:   .asciiz "Arquitetura de "    # String base para a cópia inicial
+str2:   .space 50                    # Espaço reservado para o destino da concatenação
+str4:   .asciiz "Computadores I"     # String a ser concatenada
+str3:   .asciiz "\n"                 # Nova linha para separar saídas
+
+	.text
+	.globl main
+
+main:
+    # Salva o estado e inicializa a pilha
+    addiu $sp, $sp, -4
+    sw $ra, 0($sp)
+    
+    # Copia str1 para str2
+    la $a0, str2                     # $a0 = destino (str2)
+    la $a1, str1                     # $a1 = origem (str1)
+    jal strcpy                       # Chama strcpy
+
+    # Imprime str2 após a cópia
+    move $a0, $v0                    # $a0 = endereço de str2
+    li $v0, 4                        # syscall 4 (print_string)
+    syscall
+
+    # Imprime nova linha
+    la $a0, str3                     # $a0 = nova linha
+    li $v0, 4                        # syscall 4 (print_string)
+    syscall
+
+    # Concatena str4 ao final de str2
+    la $a0, str2                     # $a0 = destino (str2)
+    la $a1, str4                     # $a1 = origem (str4)
+    jal strcat                       # Chama strcat
+
+    # Imprime str2 após a concatenação
+    move $a0, $v0                    # $a0 = endereço de str2
+    li $v0, 4                        # syscall 4 (print_string)
+    syscall
+
+    # Finaliza o programa
+    li $v0, 10                       # syscall 10 (exit)
+    syscall
+
+# Função strcpy: copia src para dst
+# Entrada: $a0 = ponteiro para dst, $a1 = ponteiro para src
+# Saída: $v0 = ponteiro para dst
+strcpy:
+    move $t2, $a0                    # Salva o ponteiro inicial de dst em $t2
+
+do:
+    lb $t1, 0($a1)                   # Carrega o caractere atual de src em $t1
+    sb $t1, 0($a0)                   # Armazena o caractere atual em dst
+    addiu $a0, $a0, 1                # Incrementa o ponteiro de dst
+    addiu $a1, $a1, 1                # Incrementa o ponteiro de src
+    bne $t1, '\0', do                # Repete o loop enquanto t1 != '\0'
+
+    move $v0, $t2                    # Retorna o ponteiro inicial de dst
+    jr $ra                           # Retorna à função chamadora
+
+# Função strcat: concatena src ao final de dst
+# Entrada: $a0 = ponteiro para dst, $a1 = ponteiro para src
+# Saída: $v0 = ponteiro para dst
+strcat:
+    addiu $sp, $sp, -8               # Reserva espaço na pilha
+    sw $ra, 0($sp)                   # Salva $ra na pilha
+    sw $s0, 4($sp)                   # Salva $s0 na pilha
+
+    move $s0, $a0                    # Salva o ponteiro inicial de dst em $s0
+
+# Localiza o fim da string em dst
+while2:
+    lb $t0, 0($a0)                   # Carrega o caractere atual de dst em $t0
+    beq $t0, '\0', endw2             # Se *p == '\0', sai do loop
+    addiu $a0, $a0, 1                # Incrementa o ponteiro de dst
+    j while2                         # Repete o loop
+
+endw2:
+    jal strcpy                       # Copia src para o fim de dst
+
+    move $v0, $s0                    # Retorna o ponteiro inicial de dst
+
+    # Restaura o estado e a pilha
+    lw $ra, 0($sp)                   # Restaura $ra
+    lw $s0, 4($sp)                   # Restaura $s0
+    addiu $sp, $sp, 8                # Libera espaço na pilha
+    jr $ra                           # Retorna à função chamadora

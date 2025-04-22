@@ -1,0 +1,49 @@
+	.data
+s1:     .space 10                  # a1[10]
+        .align 3
+        .double 3.141592653589     # g
+        .word 291, 756             # a2[0], a2[1]
+        .byte 'X'                  # v
+        .space 3                   # Padding para alinhar k
+        .float 1.983               # k
+
+	.text
+	.globl main
+
+f1:     
+    la $t0, s1
+    l.d $f2, 16($t0)               # s1.g
+
+    la $t0, s1
+    lw $t1, 28($t0)                # s1.a2[1]
+    mtc1 $t1, $f4
+    cvt.d.w $f4, $f4               # (double)s1.a2[1]
+    
+    mul.d $f6, $f2, $f4            # $f6 = s1.g * (double)s1.a2[1]
+    
+    la $t0, s1
+    l.s $f8, 36($t0)               # s1.k
+    cvt.d.s $f8, $f8               # (double)s1.k
+
+    div.d $f10, $f6, $f8           # s1.g * (double)s1.a2[1] / (double)s1.k
+    cvt.s.d $f0, $f10              # return (float)(s1.g * (double)s1.a2[1] / (double)s1.k)
+    jr $ra
+
+main:
+    addiu $sp, $sp, -4
+    sw $ra, 0($sp)
+
+    jal f1
+
+    mov.s $f12, $f0
+    li $v0, 2
+    syscall                        # print_float(f1())
+
+    li $v0, 0                      # return 0
+    lw $ra, 0($sp)
+    addiu $sp, $sp, 4
+
+    jr $ra
+
+
+

@@ -1,0 +1,37 @@
+	.data
+	.align 2
+lista:  .space 20             			# Reserva 20 bytes para o array (SIZE * 4 bytes)
+str1:   .asciiz "\nIntroduza um numero: "   	# String de entrada
+	.text
+	.globl main
+
+
+
+#Mapa de registos
+# i: $t0
+# lista: $t1
+# lista + i: $t2
+
+main:	li $t0, 0                 		# i = 0
+
+while:  bge $t0, SIZE, endw       		# while (i < SIZE)
+
+    	li $v0, 4                 		# Código do syscall para print_string
+    	la $a0, str1              		# Endereço da string de entrada
+    	syscall                   		# Imprime a string
+
+    	la $t1, lista             		# Carrega o endereço base do array lista
+    	sll $t2, $t0, 2           		# Multiplica i por 4 para acessar a posição correta
+    	addu $t2, $t1, $t2        		# Calcula o endereço de lista[i]
+    	sw $v0, 0($t2)            		# Armazena o valor lido em lista[i]
+    	
+    	li $v0, 5                 		# Código do syscall para read_int
+    	syscall                   		# Lê um número inteiro e armazena em $v0
+
+    	addi $t0, $t0, 1          		# i++
+    	j while                   		# Retorna ao início do loop
+
+endw: 
+    	jr $ra                    		# Retorna do programa
+
+

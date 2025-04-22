@@ -1,0 +1,56 @@
+	.data
+str1:   .asciiz "Introduza um número: "
+str2:   .asciiz "\nO valor em binário é: "
+	.text
+	.globl main
+
+# Mapa de Registos
+# value: $t0
+# bit: $t1
+# i: $t2
+# numero (0x80000000) : $t3 (adicionado a meio do código)
+
+main:   li $v0,4
+        la $a0,str1            # print_string("Introduza um número: ");
+        syscall
+
+        li $v0,5
+        syscall
+        move $t0,$v0           # value = read_int();
+
+        li $v0,4
+        la $a0,str2            # print_string("\nO valor em binário é: ");
+        syscall 
+
+        li $t2,0               # i = 0
+
+for:    bge $t2,32,endfor      # for (i < 32) {
+        li $t3,0x80000000      # $t3 = 0x80000000
+        and $t1,$t0,$t3        # bit = value & 0x80000000; // isola bit 31
+
+if:     beq $t1,0,else         # if (bit != 0)
+
+        li $v0,11
+        li $a0,'1'             # print_char('1');
+        syscall
+
+        j endif
+
+else:   li $v0,11
+        li $a0,'0'             # print_char('0');
+        syscall
+
+endif:  sll $t0,$t0,1          # value = value << 1; // shift left de 1 bit
+
+        addi $t2,$t2,1         # i++
+        
+        rem $t4,$t2,4          # $t4 = i % 4
+        bne $t4,0,for          # if (i % 4 != 0), pula o espaço
+
+        li $v0,11
+        li $a0,' '             # print_char(' ');
+        syscall
+
+        j for                  # }
+
+endfor: jr $ra

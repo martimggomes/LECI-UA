@@ -1,0 +1,52 @@
+# Mapa de registos
+# n: $a0 -> $s0      # Número a ser convertido
+# b: $a1 -> $s1      # Base da conversão (ex.: 10 para decimal)
+# s: $a2 -> $s2      # Ponteiro para o buffer onde a string será armazenada
+# p: $s3             # Ponteiro atual para a posição no buffer
+# digit: $t0         # Digito convertido na base especificada
+
+	.text
+	.globl itoa         # Tornar a função global para ser usada em outros lugares
+	
+itoa:	
+	addiu $sp, $sp, -20    # Reserva espaço na pilha para salvar o estado atual
+	sw $ra, 0($sp)         # Salva o registrador de retorno ($ra) na pilha
+	sw $s0, 4($sp)         # Salva o registrador $s0 na pilha
+	sw $s1, 8($sp)         # Salva o registrador $s1 na pilha
+	sw $s2, 12($sp)        # Salva o registrador $s2 na pilha
+	sw $s3, 16($sp)        # Salva o registrador $s3 na pilha
+	
+	# Inicializa os registradores para o cálculo
+	move $s0, $a0          # Copia o número n para $s0
+	move $s1, $a1          # Copia a base b para $s1
+	move $s2, $a2          # Copia o ponteiro do buffer para $s2
+	move $s3, $a2          # Inicializa $s3 com o ponteiro inicial
+
+do:	
+	rem $t0, $s0, $s1      # Calcula o resto da divisão de $s0 por $s1 (digit = n % b)
+	div $s0, $s1           # Divide $s0 pela base b (n / b)
+	mflo $s0               # Armazena o quociente (n = n / b) em $s0
+	move $a0, $t0          # Prepara o dígito calculado ($t0) para a sub-rotina toascii
+	jal toasccii           # Chama a sub-rotina toasccii para converter o dígito em ASCII
+	sb $v0, 0($s3)         # Armazena o caractere ASCII no buffer apontado por $s3
+	addi $s3, $s3, 1       # Avança o ponteiro do buffer para a próxima posição
+	
+while:	
+	ble $s0, 0, endw       # Sai do loop se $s0 <= 0 (n <= 0)
+
+	# Finalização da string e inversão
+	sb $0, 0($s3)          # Adiciona o terminador nulo '\0' ao final da string
+	move $a0, $s2          # Passa o ponteiro do buffer inicial para strrev
+	jal strrev             # Chama a sub-rotina para inverter a string no buffer
+	move $v0, $s2          # Retorna o ponteiro da string invertida
+	j while
+
+endw:
+	# Restaura o estado dos registradores
+	lw $ra, 0($sp)         # Restaura o registrador de retorno $ra
+	lw $s0, 4($sp)         # Restaura o registrador $s0
+	lw $s1, 8($sp)         # Restaura o registrador $s1
+	lw $s2, 12($sp)        # Restaura o registrador $s2
+	lw $s3, 16($sp)        # Restaura o registrador $s3
+	addiu $sp, $sp, 20     # Libera o espaço na pilha
+	jr $ra                 # Retorna à função chamadora
