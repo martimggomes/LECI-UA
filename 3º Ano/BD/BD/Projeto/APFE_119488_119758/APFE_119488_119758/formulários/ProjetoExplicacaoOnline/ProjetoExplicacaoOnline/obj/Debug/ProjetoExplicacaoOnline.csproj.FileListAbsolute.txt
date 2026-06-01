@@ -1,0 +1,71 @@
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Form1.resources
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\source\repos\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\ferre\Desktop\LECI 3 YEAR\2 SEMESTRE\BD\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Form1.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormInscricoes.resources
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Form1.resources
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormInscricoes.resources
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\ferre\Documents\ProjetoExplicacaoOnline_atualizado (1)\ProjetoExplicacaoOnline_atualizado\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Form1.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormInscricoes.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Downloads\ProjetoExplicacaoOnline (2)\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormCursos.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe.config
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\bin\Debug\ProjetoExplicacaoOnline.pdb
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.AssemblyReference.cache
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Form1.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormCursos.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormInscricoes.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.FormUtilizadores.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.Properties.Resources.resources
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.GenerateResource.cache
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.csproj.CoreCompileInputs.cache
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.exe
+C:\Users\Martim\Desktop\Universidade\LECI\3º Ano\BD\BD\Projeto\APFE_119488_119758\APFE_119488_119758\formulários\ProjetoExplicacaoOnline\ProjetoExplicacaoOnline\obj\Debug\ProjetoExplicacaoOnline.pdb

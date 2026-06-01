@@ -1,0 +1,350 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|c:\\users\\martim\\desktop\\universidade\\leci\\3\u00BA ano\\bd\\bd\\projeto\\apfe_119488_119758\\apfe_119488_119758\\formul\u00E1rios\\projetoexplicacaoonline\\projetoexplicacaoonline\\formutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formavaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formavaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminscricoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminscricoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminstituicoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminstituicoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formpagamentos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formpagamentos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formcursos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formcursos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formcursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formavaliacoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formavaliacoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminstituicoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminstituicoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminscricoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminscricoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formavaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formavaliacoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminscricoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminscricoes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\forminstituicoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\forminstituicoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formpagamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\projetoexplicacaoonline\\formutilizadores.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C124864-7E22-4713-A612-C3CF99533B6C}|ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline.csproj|solutionrelative:projetoexplicacaoonline\\formutilizadores.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormCursos.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormCursos.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormCursos.Designer.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAI8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T01:09:23.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormInscricoes.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAUwGMBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T00:34:00.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormUtilizadores.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:39:22.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCursos.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormCursos.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormCursos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:31:29.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormPagamentos.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormPagamentos.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormPagamentos.Designer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAD4vyYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T00:24:32.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormPagamentos.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAYwBwBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T01:22:39.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormAvaliacoes.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormAvaliacoes.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormAvaliacoes.Designer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAlwIgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:17:13.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormInstituicoes.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "ViewState": "AgIAALgBAAAAAAAAAAAAALwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:11:55.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormAvaliacoes.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAswP8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:17:19.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\Form1.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\Form1.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAYwAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:26:35.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormInscricoes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInscricoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInscricoes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T01:20:47.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\Form1.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:26:16.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormCursos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormCursos.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormCursos.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormCursos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T19:14:47.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormInscricoes.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInscricoes.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInscricoes.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInscricoes.Designer.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAlwFcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T10:59:05.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormInstituicoes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInstituicoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInstituicoes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:10:44.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FormUtilizadores.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormUtilizadores.cs",
+              "ToolTip": "C:\\Users\\Martim\\Downloads\\ProjetoExplicacaoOnline (2)\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Downloads\\ProjetoExplicacaoOnline (2)\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T19:22:47.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormAvaliacoes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormAvaliacoes.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormAvaliacoes.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormAvaliacoes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:16:15.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\Form1.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\Form1.Designer.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAD4v3kAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:26:53.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormInstituicoes.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormInstituicoes.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormInstituicoes.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormInstituicoes.Designer.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAlwKwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T11:12:25.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormPagamentos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormPagamentos.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormPagamentos.cs [Design]",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormPagamentos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T01:22:09.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormUtilizadores.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.Designer.cs",
+              "RelativeDocumentMoniker": "ProjetoExplicacaoOnline\\FormUtilizadores.Designer.cs",
+              "ToolTip": "C:\\Users\\Martim\\Desktop\\Universidade\\LECI\\3\u00BA Ano\\BD\\BD\\Projeto\\APFE_119488_119758\\APFE_119488_119758\\formul\u00E1rios\\ProjetoExplicacaoOnline\\ProjetoExplicacaoOnline\\FormUtilizadores.Designer.cs",
+              "RelativeToolTip": "ProjetoExplicacaoOnline\\FormUtilizadores.Designer.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAIwOoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T00:39:28.224Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

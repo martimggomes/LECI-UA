@@ -1,0 +1,55 @@
+CREATE SCHEMA GESTAO_STOCKS;
+GO
+
+CREATE TABLE GESTAO_STOCKS.TIPO_FORNECEDOR (
+    Cod_Int     INT,
+    Designacao  NVARCHAR(60),
+
+    CONSTRAINT Tipo_Fornecedor_PK PRIMARY KEY (Cod_Int)
+);
+GO
+
+CREATE TABLE GESTAO_STOCKS.FORNECEDOR (
+    NIF         VARCHAR(9),
+    Nome        NVARCHAR(100),
+    Endereco    NVARCHAR(200),
+    Num_Fax     VARCHAR(15),
+    Cond_Pag    NVARCHAR(50), 
+    Cod_Int_Tipo_Forn INT,
+
+    CONSTRAINT Fornecedor_PK PRIMARY KEY (NIF),
+    CONSTRAINT Fornecedor_FK_Tipo_Fornecedor FOREIGN KEY (Cod_Int_Tipo_Forn) REFERENCES GESTAO_STOCKS.TIPO_FORNECEDOR(Cod_Int)
+);
+GO
+
+CREATE TABLE GESTAO_STOCKS.PRODUTO (
+    Codigo      INT,
+    Nome        NVARCHAR(100),
+    Preco       DECIMAL(10, 2),
+    Taxa_IVA    DECIMAL(4, 2),
+    Num_Unid_Stock INT,
+
+    CONSTRAINT Produto_PK PRIMARY KEY (Codigo)
+);
+GO
+
+CREATE TABLE GESTAO_STOCKS.ENCOMENDA (
+    Num_Enc     INT,
+    Data_Enc    DATE,
+    Nif_Forn    VARCHAR(9),
+
+    CONSTRAINT Encomenda_PK PRIMARY KEY (Num_Enc),
+    CONSTRAINT Encomenda_FK_Fornecedor FOREIGN KEY (Nif_Forn) REFERENCES GESTAO_STOCKS.FORNECEDOR(NIF)
+);
+GO
+
+CREATE TABLE GESTAO_STOCKS.CONTEM (
+    Num_Enc     INT,
+    Cod_Prod    INT,
+    Quantidade  INT,
+
+    CONSTRAINT Contem_PK PRIMARY KEY (Num_Enc, Cod_Prod),
+    CONSTRAINT Contem_FK_Encomenda FOREIGN KEY (Num_Enc) REFERENCES GESTAO_STOCKS.ENCOMENDA(Num_Enc),
+    CONSTRAINT Contem_FK_Produto FOREIGN KEY (Cod_Prod) REFERENCES GESTAO_STOCKS.PRODUTO(Codigo)
+);
+GO
