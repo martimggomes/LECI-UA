@@ -1,0 +1,10 @@
+- Get python3 runtime library:
+
+    https://pypi.org/project/antlr4-python3-runtime/
+
+  For example:
+  sudo pip install antlr4-python3-runtime==4.13.2
+
+  Note: if previous command fails, try:
+  sudo pip install --break-system-packages antlr4-python3-runtime==4.13.2
+
