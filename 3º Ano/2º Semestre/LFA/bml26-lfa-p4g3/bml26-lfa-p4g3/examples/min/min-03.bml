@@ -1,0 +1,16 @@
+<# 
+ # min-03.bml
+ #>
+
+const n1 : s32.8 = 1.25;
+var n2 : s32.8;
+
+n2 = parse input "Insert a number: ";   # the secondary language interpreter should be called to parse what is inserted
+
+var n3 : s32.8 = n1 + 2 * n2;
+
+print "Example min-03.bml\n";
+print " n1: " + string(n1) + "\n";
+print " n2: " + string(n2) + "\n";
+print " n3: " + string(n3) + "\n";
+

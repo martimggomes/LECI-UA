@@ -1,0 +1,161 @@
+// Templates auxiliares
+LSHIFT() ::= "<<"
+RSHIFT() ::= ">>"
+program(statements) ::= <<
+#include <iostream>
+#include <string>
+#include <cstdint>
+#include <bitset>
+#include <sstream>
+#include <array>
+#include <fstream>
+#include "../bec/bec_eval.h"
+using namespace std;
+
+// Helpers da Linguagem BML26
+bool __bml_error_flag = false;
+
+string __bml_read_file(string path) {
+    ifstream file(path);
+    if (!file.is_open()) {
+        __bml_error_flag = true;
+        return "";
+    }
+    stringstream buffer;
+    buffer << file.rdbuf();
+    return buffer.str();
+}
+
+void __bml_write_file(string path, string content) {
+    ofstream file(path, ios::app); 
+    if (file.is_open()) {
+        file << content;
+    } else {
+        __bml_error_flag = true;
+    }
+}
+
+string __bml_input(string prompt) {
+    cout $LSHIFT()$ prompt;
+    string res;
+    getline(cin, res);
+    return res;
+}
+
+int64_t __bml_parse(string expr) {
+    return (int64_t)evaluate_bec_expression(expr);
+}
+
+int64_t __bml_parse(int64_t val) {
+    return val;
+}
+
+
+template<typename T>
+string __bml_stringify(const T& val) { return to_string(val); }
+inline string __bml_stringify(const string& val) { return val; }
+inline string __bml_stringify(const char* val) { return string(val); }
+
+string __bml_to_string_base(int64_t val, int base) {
+    if (base == 10) return to_string(val);
+    if (base == 16) {
+        ostringstream oss;
+        oss $LSHIFT()$ hex $LSHIFT()$ val;
+        return oss.str();
+    }
+    if (base == 2) {
+        if (val == 0) return "0";
+        string result = "";
+        uint64_t uval = (uint64_t)val;
+        while (uval > 0) { result = (char)('0' + (uval & 1)) + result; uval $RSHIFT()$= 1; }
+        return result;
+    }
+    return to_string(val);
+}
+
+// ----------------------------------
+int main() {
+    $statements; separator="\n"$
+    return 0;
+}
+>>
+
+declaration(type, id, value) ::= <<
+$type$ $id$$if(value)$ = $value$$endif$;
+>>
+
+assignment(id, value) ::= <<
+$id$ = $value$;
+>>
+
+setBit(id, bit, value) ::= <<
+$id$ = ($id$ & ~(1LL $LSHIFT()$ $bit$)) | (((int64_t)($value$) & 1LL) $LSHIFT()$ $bit$);
+>>
+
+setBitRange(id, low, high, value) ::= <<
+{
+    int __l = $low$;
+    int __h = $high$;
+    if (__l > __h) { int __temp = __l; __l = __h; __h = __temp; } // Auto-correção dinâmica
+    int64_t __mask = ((1LL $LSHIFT()$ (__h - __l + 1)) - 1) $LSHIFT()$ __l;
+    $id$ = ($id$ & ~__mask) | (((int64_t)($value$) $LSHIFT()$ __l) & __mask);
+}
+>>
+
+print(expr) ::= <<
+cout $LSHIFT()$ $expr$;
+>>
+
+printTo(expr, dest) ::= <<
+$dest$ $LSHIFT()$ $expr$;
+>>
+
+ifStat(cond, thenStmts) ::= <<
+if ($cond$) {
+    $thenStmts; separator="\n"$
+}
+>>
+
+ifElseStat(cond, thenStmts, elseStmts) ::= <<
+if ($cond$) {
+    $thenStmts; separator="\n"$
+} else {
+    $elseStmts; separator="\n"$
+}
+>>
+
+exitStat(code) ::= <<
+exit($code$);
+>>
+
+binaryOp(left, op, right) ::= "($left$ $op$ $right$)"
+typeCast(expr) ::= "to_string($expr$)"
+typeCastBase(expr, base) ::= "__bml_to_string_base($expr$, $base$)"
+parens(expr) ::= "($expr$)"
+typeCastFixed(expr) ::= "to_string((double)($expr$) / 256.0)"
+fixedMul(left, right) ::= "((int32_t)(((int64_t)($left$) * (int64_t)($right$)) $RSHIFT()$ 8))"
+fixedMulScalar(left, right) ::= "((int64_t)($left$) * (int64_t)($right$))"
+
+loopStat(statements) ::= <<
+while (true) {
+    $statements; separator="\n"$
+}
+>>
+
+breakStat() ::= "break;"
+
+forRangeStat(var, low, high, statements) ::= <<
+for (int $var$ = $low$; $var$ <= $high$; $var$++) {
+    $statements; separator="\n"$
+}
+>>
+
+forArrayStat(var, array, statements) ::= <<
+for (auto $var$ : $array$) {
+    $statements; separator="\n"$
+}
+>>
+
+printToFile(expr, file) ::= <<
+__bml_write_file($file$, __bml_stringify($expr$));
+>>

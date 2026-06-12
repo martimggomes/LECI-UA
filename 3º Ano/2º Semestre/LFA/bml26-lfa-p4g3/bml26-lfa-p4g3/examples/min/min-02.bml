@@ -1,0 +1,16 @@
+<# 
+ # min-02.bml
+ #>
+
+var n1 : u8 = 0b00001010;   # binary literals are valid
+
+var expr : string = input "Insert an aritmetic expression: ";  
+var n2 : s32 = parse expr;      # the secondary language interpreter should be called to parse what is inserted
+
+var n3 : s32 = (n1 << 8) or (n2 and 0xFF);  # shift and bit-wise operations
+
+print "Example min-02.bml\n";
+print " n1: " + string(n1) + "\n";
+print " n2: " + string(n2) + "\n";
+print " n3: " + string(n3) + "\n";
+

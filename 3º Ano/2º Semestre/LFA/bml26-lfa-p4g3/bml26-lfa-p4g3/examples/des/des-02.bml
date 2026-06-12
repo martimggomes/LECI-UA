@@ -1,0 +1,27 @@
+<# 
+ # des-02.bml
+ #>
+
+print "Example des-02.bml\n";
+
+var n1 : u64 = input "Insert a number: ";
+
+var i : u32 = 0;
+var parity : u1 = 1;    # a 1-bit variable represents a boolean value 
+loop {
+    if i == 64 { break; }
+    if n1[i] == 1 { parity = parity xor 1; }
+    i = i + 1;
+}
+
+if parity == 1 {
+    print "The number has even parity\n";
+} else {
+    print "The number has odd parity\n";
+}
+
+<# Comentário a ser eliminado
+ #
+ # A minha ideia é que os operadores bitwise sejam suficientes, não havendo os oepradores lógicos.
+ # Nesse sentido, pensei em usar texto (and, or, not, xor) para os representar.
+ #>

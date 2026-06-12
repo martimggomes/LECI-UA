@@ -1,0 +1,30 @@
+<# 
+ # advanced-01.bml
+ # Manipulação Dinâmica de Bits e Auto-Correção de Limites
+ #>
+
+print "Example advanced-01.bml\n";
+
+var register : u32 = 0;
+print "Initial register : " + string(register, 2) + "\n";
+
+var window_size : u32 = 4;
+
+# Vamos aplicar uma máscara dinâmica movendo-a pelo registo
+for i in [0..2] {
+    var base : u32 = i * 8;
+    var topo : u32 = base + window_size - 1;
+    
+    print "Setting bits from {base} to {topo}...\n";
+    register[base .. topo] = 0b1111; 
+}
+
+print "Dynamic register : " + string(register, 2) + "\n";
+
+# Teste de inversão dinâmica: O limite inferior calculado é maior que o superior!
+var index_a : u32 = 20;
+var index_b : u32 = 16;
+print "Setting reversed range {index_a} to {index_b} (Auto-correction)...\n";
+register[index_a .. index_b] = 0b10101;
+
+print "Final register   : " + string(register, 2) + "\n";

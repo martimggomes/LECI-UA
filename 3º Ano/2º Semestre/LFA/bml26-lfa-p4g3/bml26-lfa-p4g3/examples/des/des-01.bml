@@ -1,0 +1,28 @@
+<# 
+ # des-01.bml
+ #>
+
+print "Example des-01.bml\n";
+
+var n1 : u16 = 11;
+n1[11] = 0b1;
+print " n1: " + string(n1, 2) + "\n";   # prints in base 2
+
+var n2 : u32 = 0x11;
+n2[2..6] = 0b11111;
+print " n2: " + string(n2, 2) + "\n";
+
+var n3 : u64 = input "Insert a number: ";
+
+if error { # the global error flag is triggered by the interpreter
+    print "Bad expression\n" >>> stderr;
+    exit 1;
+}
+
+if n3[0] == 0 {
+    print "The number is even\n" >>> stdout;
+}
+else {
+    print "The number is odd\n" >>> stdout;
+}
+

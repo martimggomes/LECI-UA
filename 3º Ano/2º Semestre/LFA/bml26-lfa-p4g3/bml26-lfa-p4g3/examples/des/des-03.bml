@@ -1,0 +1,24 @@
+<# 
+ # des-03.bml
+ #>
+
+print "Example des-03.bml\n";
+
+var arr : [u32; 10];
+
+for i in [0..9] {
+    print "arr[{i}]: ";
+    arr[i] = parse input;
+}
+
+var max : u32 = 0;
+for n in arr {
+    if n > max {
+        max = n;
+    }
+}
+
+print "The biggest value inserted was {max}\n";		# {max} é replaced with the value of max
+
+
+

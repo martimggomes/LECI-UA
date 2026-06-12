@@ -1,0 +1,24 @@
+<# 
+ # des-04.bml
+ # Teste de leitura e escrita em ficheiros (Nível Desejável)
+ #>
+
+print "Example des-04.bml\n";
+
+# Vamos escrever duas linhas num ficheiro txt
+print "Primeira linha do ficheiro.\n" >>> "output_teste.txt";
+print "Segunda linha do ficheiro.\n" >>> "output_teste.txt";
+
+print "Escrita concluída! A ler o ficheiro...\n\n";
+
+# Ler o conteúdo completo do ficheiro para uma variável de texto
+var conteudo : string = read "output_teste.txt";
+
+if error {
+    print "Erro: Não foi possível ler o ficheiro.\n" >>> stderr;
+    exit 1;
+}
+
+print "--- CONTEÚDO DO FICHEIRO ---\n";
+print conteudo;
+print "----------------------------\n";
