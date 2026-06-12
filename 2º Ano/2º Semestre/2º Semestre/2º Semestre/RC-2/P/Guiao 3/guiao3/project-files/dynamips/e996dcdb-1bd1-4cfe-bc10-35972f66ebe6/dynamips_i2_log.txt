@@ -1,0 +1,61 @@
+Apr 07 16:07:50.672 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Apr 07 16:07:50.673 HYPERVISOR: Started on IP = localhost, TCP port = 50352.
+Apr 07 16:07:51.174 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 07 16:07:51.175 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 3\guiao3\project-files\dynamips 
+Apr 07 16:07:51.175 GENERAL: working_dir=C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 3\guiao3\project-files\dynamips
+Apr 07 16:07:51.175 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 3\guiao3\project-files\dynamips\4f632d73-69b8-461a-8b0f-2c931bd96926 
+Apr 07 16:07:51.176 GENERAL: working_dir=C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 3\guiao3\project-files\dynamips\4f632d73-69b8-461a-8b0f-2c931bd96926
+Apr 07 16:07:51.176 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Apr 07 16:07:51.177 VM: VM R3 created.
+Apr 07 16:07:51.178 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Apr 07 16:07:51.178 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Apr 07 16:07:51.178 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.178 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Apr 07 16:07:51.179 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Apr 07 16:07:51.179 HYPERVISOR: exec_cmd: vm set_exec_area R3 64 
+Apr 07 16:07:51.180 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.180 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60609bc4 
+Apr 07 16:07:51.180 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/ferre/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Apr 07 16:07:51.181 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.4d4c.0000 
+Apr 07 16:07:51.181 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Apr 07 16:07:51.181 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Apr 07 16:07:51.183 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.183 HYPERVISOR: exec_cmd: vm slot_remove_binding R3 0 0 
+Apr 07 16:07:51.183 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.184 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-2FE 
+Apr 07 16:07:51.184 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.184 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-2FE-TX 
+Apr 07 16:07:51.185 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:51.185 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-2FE-TX 
+Apr 07 16:07:55.359 HYPERVISOR: exec_cmd: nio create_udp udp-331d3ee7-8736-49af-8c8d-6f265e06ee63 10028 127.0.0.1 10029 
+Apr 07 16:07:55.615 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-331d3ee7-8736-49af-8c8d-6f265e06ee63 
+Apr 07 16:07:55.616 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:07:55.654 HYPERVISOR: exec_cmd: nio create_udp udp-f19f814b-d333-491f-a8ad-830955fc2718 10032 127.0.0.1 10033 
+Apr 07 16:07:55.657 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-f19f814b-d333-491f-a8ad-830955fc2718 
+Apr 07 16:07:55.657 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:17:23.476 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Apr 07 16:17:23.484 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 3\guiao3\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Apr 07 16:17:23.485 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 16:17:23.493 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Apr 07 16:17:23.494 HYPERVISOR: exec_cmd: vm start R3 
+Apr 07 16:17:53.832 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:18:23.838 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:19:23.845 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:26:53.995 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:35:24.159 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:38:54.220 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 16:54:27.045 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/ferre/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Apr 07 16:54:54.560 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 17:39:59.394 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 17:39:59.395 HYPERVISOR: exec_cmd: vm stop R3 
+Apr 07 17:39:59.577 VM: VM R3 shutdown.
+Apr 07 17:39:59.579 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 17:40:07.840 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 17:40:07.840 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 17:40:07.980 HYPERVISOR: exec_cmd: vm get_status R3 
+Apr 07 17:40:07.983 HYPERVISOR: exec_cmd: vm extract_config R3 
+Apr 07 17:40:07.986 HYPERVISOR: exec_cmd: vm delete R3 
+Apr 07 17:40:07.986 VM: VM R3 destroyed.
+Apr 07 17:40:07.994 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 07 17:40:08.353 HYPERVISOR: Stopped.
+Apr 07 17:40:08.353 GENERAL: reset done.

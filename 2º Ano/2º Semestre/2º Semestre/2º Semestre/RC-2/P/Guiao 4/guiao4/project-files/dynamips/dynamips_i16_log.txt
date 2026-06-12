@@ -1,0 +1,17 @@
+Apr 14 15:13:55.702 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Apr 14 15:13:55.703 HYPERVISOR: Started on IP = localhost, TCP port = 50869.
+Apr 14 15:13:56.207 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 14 15:13:56.208 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 4\guiao4\project-files\dynamips 
+Apr 14 15:13:56.208 GENERAL: working_dir=C:\Users\ferre\OneDrive\Ambiente de Trabalho\LECI 2 YEAR\2 SEMESTER\RC-2\P\Guiao 4\guiao4\project-files\dynamips
+Apr 14 15:13:56.208 HYPERVISOR: exec_cmd: ethsw create Switch5 
+Apr 14 15:16:55.409 HYPERVISOR: exec_cmd: nio create_udp udp-e400e0a9-599d-4d01-96a4-3adf8be2a25f 10050 127.0.0.1 10049 
+Apr 14 15:16:55.409 HYPERVISOR: exec_cmd: ethsw add_nio Switch5 udp-e400e0a9-599d-4d01-96a4-3adf8be2a25f 
+Apr 14 15:16:55.423 HYPERVISOR: exec_cmd: ethsw set_access_port Switch5 udp-e400e0a9-599d-4d01-96a4-3adf8be2a25f 1 
+Apr 14 15:17:09.155 HYPERVISOR: exec_cmd: ethsw remove_nio Switch5 udp-e400e0a9-599d-4d01-96a4-3adf8be2a25f 
+Apr 14 15:17:09.165 HYPERVISOR: exec_cmd: nio delete udp-e400e0a9-599d-4d01-96a4-3adf8be2a25f 
+Apr 14 15:17:13.295 HYPERVISOR: exec_cmd: nio create_udp udp-15e6a9fe-a39a-4d35-8982-89e862417fc8 10050 127.0.0.1 10049 
+Apr 14 15:17:13.295 HYPERVISOR: exec_cmd: ethsw add_nio Switch5 udp-15e6a9fe-a39a-4d35-8982-89e862417fc8 
+Apr 14 15:17:13.325 HYPERVISOR: exec_cmd: ethsw set_access_port Switch5 udp-15e6a9fe-a39a-4d35-8982-89e862417fc8 1 
+Apr 14 15:17:17.662 HYPERVISOR: exec_cmd: nio create_udp udp-7dbf9939-b87a-4a13-bbe0-58b566919359 10053 127.0.0.1 10054 
+Apr 14 15:17:17.662 HYPERVISOR: exec_cmd: ethsw add_nio Switch5 udp-7dbf9939-b87a-4a13-bbe0-58b566919359 
+Apr 14 15:17:17.671 HYPERVISOR: exec_cmd: ethsw set_access_port Switch5 udp-7dbf9939-b87a-4a13-bbe0-58b566919359 1 
